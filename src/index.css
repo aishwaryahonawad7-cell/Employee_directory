@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1f2937;
+  background: #fbfaf5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f6fbf5;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.page-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container,
+.directory,
+.demo-section {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+.header {
+  background: #111827;
+  color: white;
+  padding: 44px 0;
+}
+
+.header h1 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #d1d5db;
+  font-size: 1.1rem;
+}
+
+main {
+  flex: 1;
+}
+
+.directory {
+  margin-top: 40px;
+}
+
+.directory-heading {
+  margin-bottom: 24px;
+}
+
+.directory-heading h2 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.directory-heading p {
+  color: #6b7280;
+}
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.employee-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+
+.employee-card:focus-within {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.employee-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.employee-header h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.employee-role {
+  color: #6b7280;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  flex: 0 0 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #de7ceb;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.info-row {
+  margin-top: 12px;
+  line-height: 1.5;
+  color: #4b5563;
+  overflow-wrap: anywhere;
+}
+
+.info-row strong {
+  color: #111827;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.status-active {
+  background: #05bb45;
+  color: white;
+}
+
+.status-leave {
+  background: rgba(255, 81, 0, 0.932);
+  color:white;
+}
+
+.status-inactive {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.demo-section {
+  margin-top: 44px;
+  margin-bottom: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.demo-section h2 {
+  font-size: 1.5rem;
+}
+
+.department-badge,
+.role-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 6px 12px;
+  border-radius: 7px;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.employee-bio,
+.card {
+  width: 45%;
+  background: white;
+  border: 1px solid #86bbb8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.employee-bio p + p {
+  margin-top: 6px;
+}
+
+.footer {
+  padding: 24px;
+  text-align: center;
+  background: #111827;
+  color: white;
+}
+
+.footer p + p {
+  margin-top: 5px;
+  color: #d1d5db;
+}
+
+@media (max-width: 900px) {
+  .employee-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 32px 0;
+  }
+
+  .employee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .directory {
+    margin-top: 30px;
+  }
+
+  .employee-card {
+    padding: 20px;
+  }
+}
+
+
+.practice-grid { display: grid; grid-template-columns: 1fr; gap: 17px; }
+.bio-box, .practice-card {
+  background: rgba(255, 255, 255, .96);
+  border: 1px solid #e3e6f2;
+  border-radius: 17px;
+  padding: 19px;
+  box-shadow: 0 8px 24px rgba(42, 48, 87, .06);
+}
